@@ -1,17 +1,17 @@
 import "./style.css";
 
 const emailInput = document.querySelector("#email");
-const emailError = document.querySelector("#email + .error-msg")
+const emailError = document.querySelector("#email + .error-msg");
 
 emailInput.addEventListener("blur", () =>{
   const emailRegEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const input = emailInput.value;
   if (input === ""){
-    const msg = "An email address must be provided."
+    const msg = "An email address must be provided.";
     emailInput.setCustomValidity(msg);
-    emailError.textContent = msg
+    emailError.textContent = msg;
   } else if (!emailRegEx.test(input)){
-    const msg = "A valid email address must be provided."
+    const msg = "A valid email address must be provided.";
     emailInput.setCustomValidity(msg);
     emailError.textContent = msg;
   } else {
@@ -21,11 +21,11 @@ emailInput.addEventListener("blur", () =>{
 });
 
 const countryInput = document.querySelector("#country");
-const countryError = document.querySelector("#country + .error-msg")
+const countryError = document.querySelector("#country + .error-msg");
 
 countryInput.addEventListener("blur", () => {
   if (countryInput.value === ""){
-    const msg = "A country must be provided."
+    const msg = "A country must be provided.";
     countryInput.setCustomValidity(msg);
     countryError.textContent = msg;
   } else {
@@ -39,7 +39,7 @@ const postalCodeError = document.querySelector("#postal-code + .error-msg");
 
 postalCodeInput.addEventListener("blur", () => {
   if (postalCodeInput.value === ""){
-    const msg = "A postal code must be provided."
+    const msg = "A postal code must be provided.";
     postalCodeInput.setCustomValidity(msg);
     postalCodeError.textContent = msg;
   } else {
@@ -56,7 +56,7 @@ const confirmPasswordError = document.querySelector("#confirm-password + .error-
 
 passwordInput.addEventListener("blur", () => {
   if (passwordInput.value === ""){
-    const msg = "A password must be provided."
+    const msg = "A password must be provided.";
     passwordInput.setCustomValidity(msg);
     passwordError.textContent = msg;
   } else {
@@ -64,23 +64,23 @@ passwordInput.addEventListener("blur", () => {
     passwordError.textContent = "";
 
     if (passwordInput.value !== confirmPasswordInput.value) {
-      const msg = "The password and its confirmation do not match."
+      const msg = "The password and its confirmation do not match.";
       confirmPasswordInput.setCustomValidity(msg);
       confirmPasswordError.textContent = msg;
     }
   }
-})
+});
 
 confirmPasswordInput.addEventListener("blur", () => {
   if (confirmPasswordInput.value !== passwordInput.value){
-    const msg = "The password and its confirmation do not match."
+    const msg = "The password and its confirmation do not match.";
     confirmPasswordInput.setCustomValidity(msg);
     confirmPasswordError.textContent = msg;
   } else {
     confirmPasswordInput.setCustomValidity("");
     confirmPasswordError.textContent = "";
   }
-})
+});
 
 const form = document.querySelector("form");
 const allInputs = document.querySelectorAll("input");
@@ -99,12 +99,12 @@ form.addEventListener("submit", (event) => {
       input.setCustomValidity("");
       inputError.textContent = "";
     }
-  })
+  });
 
   if (!form.checkValidity()){
     event.preventDefault();
     alert("Fix errors before submitting.");
   } else {
-    alert("High five!")
+    alert("High five!");
   }
-})
+});
