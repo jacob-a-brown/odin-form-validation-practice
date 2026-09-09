@@ -1,14 +1,14 @@
 {
-  "name": "javascript-template",
+  "name": "odin-form-validation-practice",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://github.com/jacob-a-brown/javascript-template#readme",
+  "homepage": "https://github.com/jacob-a-brown/odin-form-validation-practice#readme",
   "bugs": {
-    "url": "https://github.com/jacob-a-brown/javascript-template/issues"
+    "url": "https://github.com/jacob-a-brown/odin-form-validation-practice/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jacob-a-brown/javascript-template.git"
+    "url": "git+https://github.com/jacob-a-brown/odin-form-validation-practice.git"
   },
   "license": "ISC",
   "author": "Jacob Brown",
